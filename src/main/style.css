@@ -1,0 +1,102 @@
+.container_all {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.container_todo, .container_in_progress, .container_done {
+    min-width: 200px;
+    width: 500px;
+    height: max-content;
+    background-color: #EBECF0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.add_todo_open {
+    width: 100%;
+    background-color: #EBECF0;
+    padding-bottom: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.add_todo_active {
+    box-sizing: border-box;
+    height: max-content;
+    width: 100%;
+    padding: 5px;
+    background-color: #fff;
+    user-select: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.none {
+    display: none;
+}
+
+.btn_add_todo {
+    background-color: rgb(13, 192, 13);
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+}
+
+.todo {
+    min-height: 50px;
+    height: max-content;
+    border-radius: 4px;
+    margin-left: 5%;
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+}
+
+.todo_prediction {
+    min-height: 50px;
+    border-radius: 4px;
+    margin-left: 5%;
+    max-width: 90%;
+    display: inline;
+}
+
+.text_todo {
+    max-width: inherit;
+    word-wrap: break-word;
+}
+
+body {
+    background-color: #026AA7;
+}
+
+.card_name {
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-left: 5px;
+}
+
+.todo_delete, .add_todo_close {
+    user-select: none;
+    cursor: pointer;
+    font-size: 27px;
+}
+
+.todo_delete {
+    position: static;
+}
+
+.todo {
+    position: relative;
+    user-select: none;
+}
