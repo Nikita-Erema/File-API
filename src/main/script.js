@@ -1,11 +1,16 @@
 let actualElement;
+let move = false; 
+let offsetX = 0;   
+let offsetY = 0;  
 const addCard = [...document.querySelectorAll('.add_todo_open')]
 const closeAddCard = [...document.querySelectorAll('.add_todo_close')]
 const btnAddTodo = [...document.querySelectorAll('.btn_add_todo')]
 let elementUnder;
-let targetElement = null;
 const predictionPosition = document.createElement('div');
 predictionPosition.classList.add('todo_prediction')
+
+let targetElement = null;
+
 closeAddCard.forEach((e) => {
     e.addEventListener('click', (element) => { 
         const addActive = element.target.parentElement
@@ -162,7 +167,7 @@ function CreateElement(container, addActive) {
 
 function LocalStorage(nameColumn) {
     const array = [];
-    for (element of document.querySelector(`.container_${nameColumn}`).children) {
+    for (const element of document.querySelector(`.container_${nameColumn}`).children) {
         if (element.classList.contains('todo')) {
             array.push(element.children[0].textContent)
         }
