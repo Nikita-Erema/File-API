@@ -61,6 +61,7 @@ input {
     flex-direction: row;
     justify-content: space-between;
     background-color: #FFFFFF;
+    cursor: grab;
 }
 
 .todo_prediction {

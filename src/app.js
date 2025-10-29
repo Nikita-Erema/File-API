@@ -1,3 +1,5 @@
 import './main/script.js'
 import './main/style.css'
 import './main/index.html'
+import './main/localStorage.js'
+import './main/function.js'
