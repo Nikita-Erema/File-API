@@ -102,14 +102,18 @@ document.addEventListener('mouseup', function(e) {
         } else if (container) {
             if (targetElement == null) {
                 const addTodo = container.querySelector('.add_todo');
-                addTodo.insertAdjacentElement('beforebegin' ,actualElement)
+                addTodo.insertAdjacentElement('beforebegin', actualElement)
                 actualElement.style.position = 'static'
                 actualElement = undefined
             } else {
-                targetElement.insertAdjacentElement('beforebegin',actualElement)
+                targetElement.insertAdjacentElement('beforebegin', actualElement)
                 actualElement.style.position = 'static'
                 actualElement = undefined
-            }
+            } 
+        } else {
+            actualElement.style.margin = margin
+            actualElement.style.position = 'static'
+            actualElement = undefined
         }
     }
 });
